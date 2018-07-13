@@ -256,6 +256,10 @@ class Loader {
     if ( apply_filters('seravo_show_maintenance_page', true) && current_user_can( 'administrator' ) ) {
       require_once dirname( __FILE__ ) . '/modules/maintenance.php';
     }
+    if ( apply_filters('seravo_show_diskusage_page', true) && current_user_can( 'administrator' ) ) {
+      require_once dirname( __FILE__ ) . '/modules/diskusage.php';
+    }
+
 
     // Load WP-CLI module 'wp seravo'
     if ( defined( 'WP_CLI' ) && WP_CLI ) {

@@ -19,7 +19,7 @@ if ( ! class_exists('Cruftfiles') ) {
   class Cruftfiles {
 
     public static function load() {
-      add_action( 'admin_menu', array( __CLASS__, 'register_cruftfiles_page' ) );
+      //add_action( 'admin_menu', array( __CLASS__, 'register_cruftfiles_page' ) );
       add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_cruftfiles_scripts' ) );
 
       // AJAX functionality for listing and deleting files
@@ -98,7 +98,7 @@ if ( ! class_exists('Cruftfiles') ) {
       wp_register_script( 'seravo_cruftfiles', plugin_dir_url( __DIR__ ) . '/js/cruftfiles.js' );
       wp_register_script( 'seravo_cruftplugins', plugin_dir_url( __DIR__ ) . '/js/cruftplugins.js' );
 
-      if ( $hook === 'tools_page_cruftfiles_page' ) {
+      if ( $hook === 'tools_page_diskusage_page' ) {
         wp_enqueue_style( 'seravo_cruftfiles' );
         wp_enqueue_script( 'seravo_cruftfiles' );
         wp_enqueue_script( 'seravo_cruftplugins' );

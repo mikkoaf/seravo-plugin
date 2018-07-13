@@ -17,7 +17,7 @@ if ( ! class_exists('Reports') ) {
   class Reports {
 
     public static function load() {
-      add_action( 'admin_menu', array( __CLASS__, 'register_reports_page' ) );
+      //add_action( 'admin_menu', array( __CLASS__, 'register_reports_page' ) );
 
       add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_reports_scripts' ) );
 

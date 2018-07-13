@@ -18,7 +18,7 @@ if ( ! class_exists('Tests') ) {
   class Tests {
 
     public static function load() {
-      add_action('admin_menu', array( __CLASS__, 'register_tests_page' ));
+      //add_action('admin_menu', array( __CLASS__, 'register_tests_page' ));
 
       add_action('admin_enqueue_scripts', array( __CLASS__, 'register_tests_scripts' ));
 
