@@ -249,6 +249,14 @@ class Loader {
       require_once dirname( __FILE__ ) . '/modules/database.php';
     }
 
+    /*
+     * ...
+     * ...
+     */
+    if ( apply_filters('seravo_show_maintenance_page', true) && current_user_can( 'administrator' ) ) {
+      require_once dirname( __FILE__ ) . '/modules/maintenance.php';
+    }
+
     // Load WP-CLI module 'wp seravo'
     if ( defined( 'WP_CLI' ) && WP_CLI ) {
       require_once dirname( __FILE__ ) . '/modules/wp-cli.php';

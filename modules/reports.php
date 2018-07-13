@@ -41,7 +41,7 @@ if ( ! class_exists('Reports') ) {
       wp_register_script( 'chart-js', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js', null, null, true );
       wp_register_script( 'seravo_reports', plugin_dir_url( __DIR__ ) . '/js/reports.js');
       wp_register_style( 'seravo_reports', plugin_dir_url( __DIR__ ) . '/style/reports.css' );
-      if ( $page === 'tools_page_reports_page' ) {
+      if ( $page === 'tools_page_maintenance_page' ) {
         wp_enqueue_style( 'seravo_reports' );
         wp_enqueue_script('chart-js');
         wp_enqueue_script( 'color-hash', plugins_url( '../js/color-hash.js', __FILE__), 'jquery', null, false );

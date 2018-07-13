@@ -34,7 +34,7 @@ if ( ! class_exists('Tests') ) {
       wp_register_style('seravo_tests', plugin_dir_url(__DIR__) . '/style/tests.css');
       wp_register_script('seravo_tests', plugin_dir_url(__DIR__) . '/js/tests.js');
 
-      if ( $page === 'tools_page_tests_page' ) {
+      if ( $page === 'tools_page_maintenance_page' ) {
         wp_enqueue_style('seravo_tests');
         wp_enqueue_script('seravo_tests');
 
