@@ -7,6 +7,7 @@
 
 namespace Seravo;
 
+use Seravo\Helpers;
 // Deny direct access to this file
 if ( ! defined('ABSPATH') ) {
   die('Access denied!');
@@ -31,8 +32,8 @@ if ( ! class_exists('Tests') ) {
     }
 
     public static function register_tests_scripts( $page ) {
-      wp_register_style('seravo_tests', plugin_dir_url(__DIR__) . '/style/tests.css');
-      wp_register_script('seravo_tests', plugin_dir_url(__DIR__) . '/js/tests.js');
+      wp_register_style('seravo_tests', plugin_dir_url(__DIR__) . '/style/tests.css', '', Helpers::seravo_plugin_version());
+      wp_register_script('seravo_tests', plugin_dir_url(__DIR__) . '/js/tests.js', '', Helpers::seravo_plugin_version());
 
       if ( $page === 'tools_page_tests_page' ) {
         wp_enqueue_style('seravo_tests');
