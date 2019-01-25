@@ -36,7 +36,11 @@ if ( ! class_exists('Seravo_Notification') ) {
       return self::$instance;
     }
 
-    public static function give_notification( $notifiction_content ){
+    public static function give_notification( $type, $callback, $callback_args=array() ){
+      $notifiction_content = array(
+        'callback' => $callback,
+        'callback_args' => $callback_args
+      );
       ?>
 
   		<div class="notice notice-error seravo-notice">
