@@ -66,7 +66,7 @@ if ( ! class_exists('Purge_Cache') ) {
       }
       $success = filter_var($_REQUEST['seravo_purge_success'], FILTER_VALIDATE_BOOLEAN);
 
-      if ( $success ) : ?>
+      if ( $success ) :?>
         <div class="notice updated is-dismissible">
           <p><strong><?php _e( 'Success:', 'seravo' ); ?></strong> <?php _e( 'The cache was flushed.', 'seravo' ); ?> <button type="button" class="notice-dismiss"></button></p>
         </div>

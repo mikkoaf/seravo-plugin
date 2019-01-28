@@ -31,7 +31,7 @@ if ( ! class_exists('CheckPHPVersion') ) {
     public static function _seravo_check_php_version() {
 
       if ( version_compare( PHP_VERSION, self::RECOMMENDED_VERSION, '<' ) ) {
-        Seravo_Notification::give_notification('error',
+        Seravo_Notification::give_notification(array('error'),
                                             array( __CLASS__, '_seravo_show_php_warning')
                                           );
       }

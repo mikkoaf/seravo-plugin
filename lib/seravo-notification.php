@@ -43,7 +43,7 @@ if ( ! class_exists('Seravo_Notification') ) {
       );
       ?>
 
-  		<div class="notice notice-error seravo-notice">
+  		<div class="notice <?php if(in_array('error', $type)){ echo 'notice-error '; } if(in_array('is-dismissible', $type)){ echo 'is-dismissible '; }?> seravo-notice">
         <div class="seravo-banner">
           <div class="seravo-emblem">
             <a href="https://seravo.com">
